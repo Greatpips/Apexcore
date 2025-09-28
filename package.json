@@ -3,23 +3,36 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "homepage": "https://Greatpips.github.io/ApexCore", 
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
+    "@react-spring/web": "^10.0.3",
     "@tailwindcss/vite": "^4.1.13",
     "aos": "^2.3.4",
+    "framer-motion": "^12.23.19",
+    "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.16.0",
     "react-modal": "^3.16.3",
     "react-scroll": "^1.9.3",
     "react-type-animation": "^3.2.0",
     "swiper": "^12.0.2",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
@@ -29,6 +42,7 @@
     "eslint": "^9.35.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
     "globals": "^16.4.0",
     "vite": "^7.1.6"
   }
