@@ -16,7 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = ["Home", "About", "Features", "Highlights", "Contact"];
+  const navLinks = ["Home", "About", "Features", "Highlights", "Contacts"];
 
   return (
     <nav
