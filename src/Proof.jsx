@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import proof1 from "./Img/proof1.jpeg";
-import proof2 from "./Img/proof2.jpeg";
-import proof3 from "./Img/proof3.jpeg";
-import proof4 from "./Img/proof4.jpeg";
-import proof5 from "./Img/proof5.jpeg";
+import proof1 from "./Img/proof_1.jpeg";
+import proof2 from "./Img/proof_2.jpeg";
+import proof3 from "./Img/proof_3.jpeg";
+import proof4 from "./Img/proof_4.jpeg";
+import proof5 from "./Img/proof_5.jpeg";
 
 // Define the images array with imported images
 const IMAGES = [
