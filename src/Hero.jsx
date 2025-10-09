@@ -8,7 +8,7 @@ export default function Hero() {
     const [showForm, setShowForm] = useState(false);
   
   return (
-    <section className="relative w-full mt-20">
+    <section className="relative w-full mt-20" id="home">
       <div className="relative block md:hidden w-full">
         <img
           src={Logo}

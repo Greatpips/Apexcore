@@ -7,12 +7,9 @@ const FadeInOnScroll = ({ children, delay = 0 }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(ref.current); // animate only once
-        }
+        setIsVisible(entry.isIntersecting); // Update visibility based on intersection
       },
-      { threshold: 0.2 } // trigger when 20% is visible
+      { threshold: 0.2 } // Trigger when 20% is visible
     );
 
     if (ref.current) {
@@ -20,7 +17,9 @@ const FadeInOnScroll = ({ children, delay = 0 }) => {
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, []);
 
