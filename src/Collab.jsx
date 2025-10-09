@@ -1,5 +1,5 @@
 import Translogo from "./Img/trans-logo.png";
-import GtcLogo from "./Img/dark-logo.webp";
+import GtcLogos from "./Img/dark-logo.webp";
 import { FaHandshake } from "react-icons/fa";
 
 function Collab() {
@@ -28,7 +28,7 @@ function Collab() {
         </div>
         <div className="flex-shrink-0">
           <img
-            src={GtcLogo}
+            src={GtcLogos}
             alt="GTCFX Logo"
             className="h-12 sm:h-12 md:h-16 w-auto object-contain"
             onError={(e) => {
