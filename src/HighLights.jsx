@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FadeInOnScroll from "./FadeInOnScroll";
 import video1 from "./Videos/video.MP4";
-import webinar1 from "./Img/webinar_1.jpg";
-import webinar2 from "./Img/webinar_2.jpg";
-import webinar3 from "./Img/webinar_3.jpg";
+import webinar1 from "./Img/webinar1.JPG";
+import webinar2 from "./Img/webinar2.JPG";
+import webinar3 from "./Img/webinar3.JPG";
 
 function HighLights() {
   const [selectedImage, setSelectedImage] = useState(null);
