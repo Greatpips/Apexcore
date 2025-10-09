@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import proof1 from "./Img/proof1.jpeg";
-import proof2 from "./Img/proof2.jpeg";
-import proof3 from "./Img/proof3.jpeg";
-import proof4 from "./Img/proof4.jpeg";
-import proof5 from "./Img/proof5.jpeg";
+import proof1 from "./Img/proof1.png";
+import proof2 from "./Img/proof2.png";
+import proof3 from "./Img/proof3.png";
+import proof4 from "./Img/proof4.png";
+import proof5 from "./Img/proof5.png";
 
 // Define the images array with imported images
 const IMAGES = [
@@ -121,10 +121,10 @@ const Proof = () => {
   }[slidesPerView];
 
   return (
-    <div className="p-2 pt-[8em] bg-gray-100 min-h-screen font-sans">
+    <div className="p-2 pt-[3em] bg-gray-100 min-h-screen font-sans">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-4 text-center">
-          Proof From Some Of Our Clients
+          Proof From Some Of Our Running Accounts
         </h1>
       
         {/* SLIDER CONTAINER */}

@@ -6,22 +6,22 @@ import SignupForm from "./SignupForm";
 const Testi = () => {
   const allMessages = [
     {
-      text: "I joined ApexCore in 2022, and it completely changed how I view trading. Mr Paul Martins and his team gave me the clarity and discipline I'd been missing. Their mentorship and community made me believe I could actually succeed. - Blessing A., Lagos",
+      text: "The Smart Earner Bot from ApexCore has been a total breakthrough for me. It's simple, reliable, and incredibly effective — I've seen consistent results without the stress of manual trading. ApexCore really outdid themselves with this innovation; it feels like having a professional trader working for me 24/7. - Blessing A., Lagos",
     },
     {
-      text: "Before joining ApexCore, I struggled to stay consistent. But with Mr Paul Martins' guidance and the detailed educational sessions, I've grown more confident and profitable. The support feels personal — they truly care about your progress. - David K., Abuja",
+      text: "Since I started using the Smart Earner Bot from ApexCore, my trading has become effortless. It analyzes the markets better than I ever could and executes trades with precision. I finally feel in control and stress-free. - Chinedu K., Abuja",
     },
     {
-      text: "Trading used to feel confusing and lonely, but ApexCore changed that. The webinars, one-on-one calls, and community made all the difference. Mr Paul Martins knows how to simplify complex market ideas for everyday traders like me. - Chioma E., Port Harcourt",
+      text: "The Smart Earner Bot by ApexCore is the best decision I've made this year. It works quietly in the background, making consistent profits while I focus on other things. ApexCore truly understands what traders need. - Amara O., Port Harcourt",
     },
     {
-      text: "Joining ApexCore was the best decision I've made in my trading career. The level of education and patience from Mr Paul Martins and his team is unmatched. I finally understand market structure and risk management properly. - Samuel O., Enugu",
+      text: "I was skeptical at first, but the Smart Earner Bot from ApexCore proved itself fast. The accuracy and risk management are impressive — it feels like trading with a pro's discipline. Huge thanks to ApexCore for this tool. - Tunde E., Ibadan",
     },
     {
-      text: "I had tried multiple trading platforms, but none offered the genuine support that ApexCore gives. Mr Paul Martins personally guided me through my learning stages, and now I trade with confidence and consistency. - Ruth N., Ibadan",
+      text: "With ApexCore's Smart Earner Bot, trading has never been this easy. It removes the emotions, follows the data, and delivers steady results. ApexCore really built something special for traders who want consistency. - Joy C., Enugu",
     },
     {
-      text: "Thanks to ApexCore, I no longer chase signals or trade blindly. The education I received from Mr Paul Martins built my confidence and independence as a trader. It feels great to finally have direction in the markets. - Emmanuel T., Abuja",
+      text: "The Smart Earner Bot by ApexCore has simplified my trading life completely. I don't spend hours analyzing charts anymore — the bot does it all with precision. It's reliable, smart, and worth every bit of trust. - Michael O., Lagos",
     },
   ];
 

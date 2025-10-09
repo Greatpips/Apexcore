@@ -1,106 +1,116 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FadeInOnScroll from "./FadeInOnScroll";
-import video1 from "./Videos/video.MP4";
+import video1 from "./Videos/video1.mp4";
+import video2 from "./Videos/video2.mp4";
+import video3 from "./Videos/video3.mp4";
+import video4 from "./Videos/video4.mp4";
 import webinar1 from "./Img/webinar1.JPG";
 import webinar2 from "./Img/webinar2.JPG";
 import webinar3 from "./Img/webinar3.JPG";
+import webinar4 from "./Img/webinar4.jpeg";
+import webinar5 from "./Img/webinar5.jpeg";
+import webinar6 from "./Img/webinar6.jpeg";
+import webinar7 from "./Img/webinar7.jpeg";
+import webinar8 from "./Img/webinar8.jpeg";
 import SignupForm from "./SignupForm";
 
 function HighLights() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showForm, setShowForm] = useState(false);
+
   const openModal = (image) => setSelectedImage(image);
   const closeModal = () => setSelectedImage(null);
-   const [showForm, setShowForm] = useState(false);
+
+  const videos = [video1, video2, video3, video4];
+  const images = [
+    webinar1,
+    webinar2,
+    webinar3,
+    webinar4,
+    webinar5,
+    webinar6,
+    webinar7,
+    webinar8,
+  ];
 
   return (
-    <section id="highlights" className="bg-gray-100 py-16 ">
+    <section id="highlights" className="bg-gray-100 py-10">
       <div className="container mx-auto px-4 max-w-6xl">
         <FadeInOnScroll>
-          <h2 className="text-3xl md:text-4xl text-center font-bold mb-8 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-            Highlights From Our Previous Webinars
+          <h2 className="text-3xl md:text-4xl text-center font-bold mb-10 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            Highlights From Our Previous Seminars
           </h2>
         </FadeInOnScroll>
 
-        {/* 2x2 Grid: Video & Image 1 (top), Image 2 & Image 3 (bottom) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4 items-stretch">
-          {/* Video: top left */}
-          <FadeInOnScroll>
-            <div className="relative group rounded-xl overflow-hidden shadow-lg">
-              <video
-                className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
-                controls
-                autoPlay
-                muted
-                loop
+        {/* Unified grid layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {videos.map((vid, idx) => (
+            <FadeInOnScroll key={idx}>
+              <div className="relative group rounded-xl overflow-hidden shadow-lg">
+                <video
+                  className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src={vid} type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold">
+                    Webinar Video Highlight
+                  </span>
+                </div>
+              </div>
+            </FadeInOnScroll>
+          ))}
+
+          {images.map((img, idx) => (
+            <FadeInOnScroll key={idx}>
+              <div
+                className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
+                onClick={() => openModal(img)}
               >
-                <source src={video1} type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-black/24 opacity-0 group-hover:opacity-100 transition duration-400 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Webinar Video Highlight</span>
+                <img
+                  src={img}
+                  alt={`Webinar Highlight ${idx + 1}`}
+                  className="w-full h-[250px] md:h-[300px] lg:h-[350px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold">
+                    Highlight {idx + 1}
+                  </span>
+                </div>
               </div>
-            </div>
-          </FadeInOnScroll>
-
-          {/* Image 1: top right */}
-          <FadeInOnScroll>
-            <div
-              className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
-              onClick={() => openModal(webinar1)}
-            >
-              <img
-                src={webinar1}
-                alt="Webinar Highlight 1"
-                className="w-full h-[300px] md:h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-400 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Highlight 1</span>
-              </div>
-            </div>
-          </FadeInOnScroll>
-
-          {/* Image 2: bottom left */}
-          <FadeInOnScroll>
-            <div
-              className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
-              onClick={() => openModal(webinar2)}
-            >
-              <img
-                src={webinar2}
-                alt="Webinar Highlight 2"
-                className="w-full h-[200px] md:h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-400 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Highlight 2</span>
-              </div>
-            </div>
-          </FadeInOnScroll>
-
-          {/* Image 3: bottom right */}
-          <FadeInOnScroll >
-            <div
-              className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
-              onClick={() => openModal(webinar3)}
-            >
-              <img
-                src={webinar3}
-                alt="Webinar Highlight 3"
-                className="w-full h-[200px] md:h-[200px] object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-400 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Highlight 3</span>
-              </div>
-            </div>
-          </FadeInOnScroll>
+            </FadeInOnScroll>
+          ))}
         </div>
+
+        {/* Register Button */}
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowForm(true)}
+            className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
+              bg-gradient-to-r from-blue-600 to-green-600 
+              overflow-hidden transition-transform duration-300 
+              hover:scale-110 hover:rotate-1"
+          >
+            <span className="relative z-10">Register Now</span>
+            <span className="glow-slide"></span>
+          </button>
+        </div>
+
+        {showForm && <SignupForm onClose={() => setShowForm(false)} />}
       </div>
 
       {/* Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50" onClick={closeModal}>
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
           <motion.div
             className="relative max-w-4xl w-full p-4"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -109,32 +119,32 @@ function HighLights() {
             transition={{ duration: 0.25 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <img src={selectedImage} alt="Selected Webinar Highlight" className="w-full h-auto rounded-2xl shadow-2xl" />
+            <img
+              src={selectedImage}
+              alt="Selected Webinar Highlight"
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
             <button
               className="absolute top-3 right-3 bg-white text-gray-800 rounded-full p-2 hover:bg-gray-100 transition"
               onClick={closeModal}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </motion.div>
         </div>
       )}
-      <div className="flex justify-center pt-10 items-center">
-         <button
-      
-                  onClick={() => setShowForm(true)}
-                    className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
-                    bg-gradient-to-r from-blue-600 to-green-600 
-                    overflow-hidden transition-transform duration-300 
-                    hover:scale-110 hover:rotate-1"
-                  >
-                    <span className="relative z-10">Register Now</span>
-                    <span className="glow-slide"></span>
-                  </button>
-      </div>
-      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </section>
   );
 }

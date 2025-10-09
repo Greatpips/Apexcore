@@ -4,9 +4,9 @@ import { FaHandshake } from "react-icons/fa";
 
 function Collab() {
   return (
-    <div className=" p-2 pt-[2em] md:pt-[4em] lg:pt-[6em]   bg-gray-100 flex flex-col items-center justify-center font-sans">
+    <div className=" p-2 pt-[2em]    bg-gray-100 flex flex-col items-center justify-center font-sans">
       <h1 className="text-xl sm:text-2xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-2 sm:mb-4 text-center">
-        In Collab with GTCFX
+        In Collaboration with GTCFX
       </h1>
       <div className="flex items-center justify-center space-x-2 sm:space-x-4 md:space-x-6">
         <div className="flex-shrink-0">
@@ -37,6 +37,19 @@ function Collab() {
             }}
           />
         </div>
+      </div>
+      <div className="flex justify-center items-center mt-[2em]">
+         <button
+      
+                  
+                    className="relative px-8 md:px-20 py-3 text-white rounded-full 
+                    bg-gradient-to-r from-blue-600 to-green-600 
+                    overflow-hidden transition-transform duration-300 
+                    hover:scale-110 hover:rotate-1"
+                  >
+                    <span className="relative z-10"><a href="https://mygtcportal.com/getview?view=register&token=ejtowwwwqowwwwww" className="font-semibold">Register With Gtcfx Now</a></span>
+                    <span className="glow-slide"></span>
+                  </button>
       </div>
     </div>
   );

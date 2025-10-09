@@ -34,7 +34,7 @@ export default function AboutSection() {
   
 
   return (
-    <section id="about" className="relative w-full py-22 bg-gray-100 overflow-hidden">
+    <section id="about" className="relative w-full py-18 bg-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-10">
         {/* Grid for About The Robot */}
         <div className="grid md:grid-cols gap-10 mb-20 items-center">
@@ -44,7 +44,7 @@ export default function AboutSection() {
                  before:from-blue-600 before:to-green-600 pb-3">
               About The Smart Earner Bot
             </h2>
-            <p className="text-lg text-[rgb(2,0,47)]">The Smart Earner Robot is an AI powered trading solution designed to simplify Forex and commodity trading. Built on a tested zone-based strategy and optimized for cent accounts, it helps traders grow steadily with less stress and proper risk management. Whether you're a beginner with no trading knowledge or a busy professional, the robot takes care of trade execution while you focus on simple account management. No hype just smart, steady growth powered by AI.</p>
+            <p className="text-lg text-[rgb(2,0,47)]">The Smart Earner Robot is an AI powered trading solution designed to simplify Forex and commodity trading. Built on a tested zone-based strategy and optimized for cent and standard accounts, it helps traders grow steadily with less stress and proper risk management. Whether you're a beginner with no trading knowledge or a busy professional, the robot takes care of trade execution while you focus on simple account management. No hype just smart, steady growth powered by AI.</p>
 
            </SlideInLeft>
 
@@ -339,7 +339,7 @@ export default function AboutSection() {
   
 </div>
 
-      <div className="flex justify-center pt-10 items-center">
+      <div className="flex justify-center items-center pt-5">
          <button
       
                   onClick={() => setShowForm(true)}

@@ -5,7 +5,7 @@ import footerMap from './Img/footer-map.webp';
 
 function Footer() {
   return (
-    <section className="bg-[rgb(2,0,47)] py-8 sm:py-12 px-4 sm:px-6 lg:px-8" id="contacts">
+    <section className="bg-[rgb(2,0,47)] py-8 sm:py-10 px-4 sm:px-6 lg:px-8" id="contacts">
       <div className="border-t-2 border-t-white pt-6 sm:pt-8 max-w-screen-xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           <div className="flex-1 flex flex-col items-center lg:items-start gap-6 sm:gap-8">
