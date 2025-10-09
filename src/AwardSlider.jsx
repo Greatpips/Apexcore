@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import FadeIn from './FadeInOnScroll';
-import award1 from './img/award1.webp';
-import award2 from './img/award2.webp';
-import award3 from './img/award3.webp';
-import award4 from './img/award4.webp';
-import award5 from './img/award5.webp';
-import award6 from './img/award6.webp';
-import award7 from './img/award7.webp';
-import award8 from './img/award8.webp';
-import award9 from './img/award9.webp';
-import award10 from './img/award10.webp';
-import award11 from './img/award11.webp';
-import award12 from './img/award12.webp';
+import award1 from './Img/award1.webp';
+import award2 from './Img/award2.webp';
+import award3 from './Img/award3.webp';
+import award4 from './Img/award4.webp';
+import award5 from './Img/award5.webp';
+import award6 from './Img/award6.webp';
+import award7 from './Img/award7.webp';
+import award8 from './Img/award8.webp';
+import award9 from './Img/award9.webp';
+import award10 from './Img/award10.webp';
+import award11 from './Img/award11.webp';
+import award12 from './Img/award12.webp';
+import SignupForm from "./SignupForm";
 
 const images = [
   award1,
@@ -33,6 +34,7 @@ const AwardSlider = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [status, setStatus] = useState(null);
+  
 
   // Added formData state for inputs
 
@@ -121,6 +123,20 @@ const AwardSlider = () => {
           </div>
         </FadeIn>
       </div>
+      <div className="flex justify-center items-center mt-[4em]">
+         <button
+      
+                  onClick={() => setShowForm(true)}
+                    className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
+                    bg-gradient-to-r from-blue-600 to-green-600 
+                    overflow-hidden transition-transform duration-300 
+                    hover:scale-110 hover:rotate-1"
+                  >
+                    <span className="relative z-10">Register Now</span>
+                    <span className="glow-slide"></span>
+                  </button>
+      </div>
+      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </div>
    
      

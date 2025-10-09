@@ -1,7 +1,7 @@
-import FooterLogo from './img/footer-logo.webp';
-import iso9001 from './img/iso9001_icon.webp';
-import iso26000 from './img/iso26000_icon.webp';
-import footerMap from './img/footer-map.webp';
+import FooterLogo from './Img/footer-logo.webp';
+import iso9001 from './Img/iso9001_icon.webp';
+import iso26000 from './Img/iso26000_icon.webp';
+import footerMap from './Img/footer-map.webp';
 
 function Footer() {
   return (

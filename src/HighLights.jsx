@@ -5,11 +5,13 @@ import video1 from "./Videos/video.MP4";
 import webinar1 from "./Img/webinar1.JPG";
 import webinar2 from "./Img/webinar2.JPG";
 import webinar3 from "./Img/webinar3.JPG";
+import SignupForm from "./SignupForm";
 
 function HighLights() {
   const [selectedImage, setSelectedImage] = useState(null);
   const openModal = (image) => setSelectedImage(image);
   const closeModal = () => setSelectedImage(null);
+   const [showForm, setShowForm] = useState(false);
 
   return (
     <section id="highlights" className="bg-gray-100 py-16 ">
@@ -119,6 +121,20 @@ function HighLights() {
           </motion.div>
         </div>
       )}
+      <div className="flex justify-center items-center">
+         <button
+      
+                  onClick={() => setShowForm(true)}
+                    className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
+                    bg-gradient-to-r from-blue-600 to-green-600 
+                    overflow-hidden transition-transform duration-300 
+                    hover:scale-110 hover:rotate-1"
+                  >
+                    <span className="relative z-10">Register Now</span>
+                    <span className="glow-slide"></span>
+                  </button>
+      </div>
+      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </section>
   );
 }

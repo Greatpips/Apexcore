@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FadeIn from './FadeInOnScroll';
-import star from './img/stars.png';
+import star from './Img/stars.png';
+import SignupForm from "./SignupForm";
 
 const Testi = () => {
   const allMessages = [
@@ -30,6 +31,7 @@ const Testi = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [status, setStatus] = useState(null);
+  
 
   // Added formData state for inputs
  
@@ -138,6 +140,20 @@ const Testi = () => {
 
        
       </div>
+      <div className="flex justify-center items-center mt-[4em]">
+         <button
+      
+                  onClick={() => setShowForm(true)}
+                    className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
+                    bg-gradient-to-r from-blue-600 to-green-600 
+                    overflow-hidden transition-transform duration-300 
+                    hover:scale-110 hover:rotate-1"
+                  >
+                    <span className="relative z-10">Register Now</span>
+                    <span className="glow-slide"></span>
+                  </button>
+      </div>
+        {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </section>
   );
 };

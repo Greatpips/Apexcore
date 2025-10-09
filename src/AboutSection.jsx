@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import certificate1 from "./Img/certificate1.jpeg"
 import certificate2 from "./Img/certificate2.jpeg"
 import certificate3 from "./Img/certificate3.jpeg"
+import SignupForm from "./SignupForm";
 
 import { FaRobot, FaBrain, FaUserGraduate, FaMobileAlt, FaClock, FaCheckCircle } from "react-icons/fa";
 import { MdOutlineSecurity, MdShowChart } from "react-icons/md";
@@ -28,6 +29,8 @@ export default function AboutSection() {
   const closeModal = () => {
     setSelectedCert(null);
   }
+
+  const [showForm, setShowForm] = useState(false);
   
 
   return (
@@ -335,7 +338,26 @@ export default function AboutSection() {
     </div>
   
 </div>
+
+      <div className="flex justify-center items-center">
+         <button
+      
+                  onClick={() => setShowForm(true)}
+                    className="relative px-8 md:px-20 py-3 font-semibold text-white rounded-full 
+                    bg-gradient-to-r from-blue-600 to-green-600 
+                    overflow-hidden transition-transform duration-300 
+                    hover:scale-110 hover:rotate-1"
+                  >
+                    <span className="relative z-10">Register Now</span>
+                    <span className="glow-slide"></span>
+                  </button>
       </div>
+                
+
+      </div>
+      
+
+      {showForm && <SignupForm onClose={() => setShowForm(false)} />}
     </section>
   );
 }
