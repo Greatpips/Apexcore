@@ -20,11 +20,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-md bg-white/70 shadow-md"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 "backdrop-blur-md bg-white/80 shadow-md"
+       `}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 ">
         {/* Logo */}

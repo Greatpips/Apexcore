@@ -41,7 +41,7 @@ export default function AboutSection() {
           {/* Text */}
            <SlideInLeft delay={0.3}>
              <h2 className="text-4xl text-center font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent
-                 before:from-blue-600 before:to-green-600">
+                 before:from-blue-600 before:to-green-600 pb-3">
               About The Smart Earner Bot
             </h2>
             <p className="text-lg text-[rgb(2,0,47)]">The Smart Earner Robot is an AI powered trading solution designed to simplify Forex and commodity trading. Built on a tested zone-based strategy and optimized for cent accounts, it helps traders grow steadily with less stress and proper risk management. Whether you're a beginner with no trading knowledge or a busy professional, the robot takes care of trade execution while you focus on simple account management. No hype just smart, steady growth powered by AI.</p>
@@ -339,7 +339,7 @@ export default function AboutSection() {
   
 </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center pt-10 items-center">
          <button
       
                   onClick={() => setShowForm(true)}

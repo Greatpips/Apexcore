@@ -121,7 +121,7 @@ function HighLights() {
           </motion.div>
         </div>
       )}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center pt-10 items-center">
          <button
       
                   onClick={() => setShowForm(true)}
