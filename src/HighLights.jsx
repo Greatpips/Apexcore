@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FadeInOnScroll from "./FadeInOnScroll";
-import video1 from "./Videos/video.mp4";
+import video1 from "./Videos/video.MP4";
 import webinar1 from "./Img/webinar_1.jpg";
 import webinar2 from "./Img/webinar_2.jpg";
 import webinar3 from "./Img/webinar_3.jpg";
